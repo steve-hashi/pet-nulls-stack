@@ -24,7 +24,7 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  count = 7
+  count = 0
 
   lifecycle {
     action_trigger {
