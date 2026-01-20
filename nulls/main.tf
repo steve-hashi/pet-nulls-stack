@@ -45,8 +45,8 @@ locals {
 action "bufo_print" "success" {
   config {
     name = local.secret_name
-    message = "Hello, ${var.pet}!"
   }
+  message = "Hello, ${var.pet}!"
 }
 
 output "ids" {
