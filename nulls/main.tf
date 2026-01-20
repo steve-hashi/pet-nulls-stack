@@ -24,7 +24,7 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  count = 2
+  count = 3
 
   lifecycle {
     action_trigger {
@@ -45,6 +45,7 @@ locals {
 action "bufo_print" "success" {
   config {
     name = local.secret_name
+    message = "Hello, ${var.pet}!"
   }
 }
 
