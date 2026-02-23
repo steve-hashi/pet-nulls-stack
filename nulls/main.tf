@@ -24,8 +24,7 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  count = 5
-
+  count = 6
   lifecycle {
     action_trigger {
       events  = [after_create, after_update]
