@@ -5,9 +5,8 @@
 deployment "simple" {
   inputs = {
     prefix           = "simple"
-    instances        = 0
+    instances        = 1
   }
-  destroy = true
 }
 
 deployment "complex" {
@@ -15,5 +14,4 @@ deployment "complex" {
     prefix           = "complex"
     instances        = 3
   }
-    destroy = true
 }
