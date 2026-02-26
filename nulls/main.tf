@@ -24,7 +24,7 @@ variable "instances" {
 }
 
 resource "null_resource" "this" {
-  count = 4
+  count = 1
   lifecycle {
     action_trigger {
       events  = [after_create, after_update]
@@ -33,7 +33,8 @@ resource "null_resource" "this" {
   }
 
   triggers = {
-    pet = var.pet
+    pet             = var.pet
+    deployment_time = timestamp()
   }
 }
 
