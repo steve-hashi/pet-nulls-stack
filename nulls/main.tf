@@ -31,11 +31,6 @@ resource "null_resource" "this" {
       actions = [action.bufo_print.success]
     }
   }
-
-  triggers = {
-    pet             = var.pet
-    deployment_time = timestamp()
-  }
 }
 
 locals {
