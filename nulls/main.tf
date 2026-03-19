@@ -27,7 +27,7 @@ resource "null_resource" "this" {
   count = 2
   lifecycle {
     action_trigger {
-      events  = [after_create, after_update]
+      events  = [after_create]
       actions = [action.bufo_print.success]
     }
   }
